@@ -50,11 +50,14 @@ class InterfazChat extends JFrame{
 		
 		// Se añaden componentes pertenecientes a PanelNorteInterior y PanelNorteInterior2
 		panelNorteInterior.add(new JLabel("Nick")).setForeground(Color.CYAN);
-		panelNorteInterior.add(new JTextField(10));
+		JTextField jText1 = new JTextField(15);
+		panelNorteInterior.add(jText1).setForeground(Color.WHITE);
 		panelNorteInterior.add(new JButton("Login"));
 		panelNorteInterior.add(new JButton("Logout"));
 		
-		panelNorteInterior2.add(new JLabel("Conversacion:"), BorderLayout.SOUTH);
+		JLabel label1 = new JLabel("Conversacion");
+		label1.setForeground(Color.CYAN);
+		panelNorteInterior2.add(label1, BorderLayout.SOUTH);
 		
 		// Se añaden los paneles interiores al PanelNorte
 		panelNorte.add(panelNorteInterior);
@@ -64,11 +67,14 @@ class InterfazChat extends JFrame{
 		this.add(panelNorte, BorderLayout.NORTH);
 		
 		// Se añade un JTextField al layout principal, ocupará el centro, oeste y este
-		this.add(new JTextField()).setBackground(Color.LIGHT_GRAY);
+		this.add(new JTextField()).setBackground(Color.DARK_GRAY);
 
 		// Se añaden componentes pertenecientes a PanelSurInterior
-		panelSurInterior.add(new JLabel("Mensaje"));
-		panelSurInterior.add(new JTextField(25), FlowLayout.CENTER).setForeground(Color.WHITE);
+		panelSurInterior.add(new JLabel("Mensaje")).setForeground(Color.CYAN);;
+		
+		JTextField jText2 = new JTextField(25);
+		
+		panelSurInterior.add(jText2, FlowLayout.CENTER).setForeground(Color.WHITE);
 		panelSurInterior.add(new JButton("Enviar"));
 		
 		// Se añade el panel interiore al panelSur
@@ -79,6 +85,8 @@ class InterfazChat extends JFrame{
 		
 		// Color de paneles
 		
+		jText1.setBackground(Color.DARK_GRAY);
+		jText2.setBackground(Color.DARK_GRAY);
 		panelNorteInterior.setBackground(new Color(43,87,135));
 		panelNorteInterior2.setBackground(new Color(43,87,135));
 		panelSurInterior.setBackground(new Color(43,87,135));
