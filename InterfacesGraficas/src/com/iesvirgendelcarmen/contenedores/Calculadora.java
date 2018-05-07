@@ -17,7 +17,7 @@ public class Calculadora {
 				crearAplicacion();
 			}
 			private void crearAplicacion() {
-				JFrame frame = new InterfazChat();
+				JFrame frame = new InterfazCalculadora();
 				frame.setVisible(true);
 			}
 		});

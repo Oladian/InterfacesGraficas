@@ -35,36 +35,54 @@ class InterfazChat extends JFrame{
 	
 	public InterfazChat() {
 		iniciarVentana();
-		colocarComponentes();
+		colocarComponentesChat();
 	}
 	
-	private void colocarComponentes() {
+	private void colocarComponentesChat() {
 		
-		JPanel panel1 = new JPanel();
-		JPanel panel2 = new JPanel();
-		//GridLayout layout = new GridLayout(4,4);
-		panel1.add(new JLabel("Nick"));
-		panel1.add(new JTextField(10));
-		panel1.add(new JButton("Login"));
-		panel1.add(new JButton("Logout"));
-		this.add(panel1, BorderLayout.NORTH);
-		panel2.add(new JLabel("Conversacion:"),BorderLayout.WEST);
-		panel2.add(new JTextField(500));
-		this.add(panel2, BorderLayout.CENTER);
-		//JPanel panel = new JPanel();
-		//panel.setLayout(layout);
-		// añadir el panel al border layout
-		//this.add(panel, BorderLayout.CENTER);
+		// Creación de objetos panel
+		JPanel panelNorte = new JPanel(new GridLayout(2,0));
+		JPanel panelNorteInterior =  new JPanel(new FlowLayout(FlowLayout.CENTER));
+		JPanel panelNorteInterior2 = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		JPanel panelSur = new JPanel(new GridLayout(1, 0));
+		JPanel panelSurInterior = new JPanel(new FlowLayout(FlowLayout.CENTER));
 		
+		// Se añaden componentes pertenecientes a PanelNorteInterior y PanelNorteInterior2
+		panelNorteInterior.add(new JLabel("Nick"));
+		panelNorteInterior.add(new JTextField(10));
+		panelNorteInterior.add(new JButton("Login"));
+		panelNorteInterior.add(new JButton("Logout"));
+		panelNorteInterior2.add(new JLabel("Conversacion:"), BorderLayout.SOUTH);
+		
+		// Se añaden los paneles interiores al PanelNorte
+		panelNorte.add(panelNorteInterior);
+		panelNorte.add(panelNorteInterior2);
+
+		// Se añade el panelNorte al layout principal
+		this.add(panelNorte, BorderLayout.NORTH);
+		
+		// Se añade un JTextField al layout principal
+		this.add(new JTextField());
+
+		// Se añaden componentes pertenecientes a PanelSurInterior
+		panelSurInterior.add(new JLabel("Mensaje"));
+		panelSurInterior.add(new JTextField(25), FlowLayout.CENTER);
+		panelSurInterior.add(new JButton("Enviar"));
+		
+		// Se añade el panel interiore al panelSur
+		panelSur.add(panelSurInterior);
+		
+		// Se añade el panelSur al layout principal
+		this.add(panelSur, BorderLayout.SOUTH);
 	}
 	
 	// Desacoplando codigo que establece las opciones de la frame
 	private void iniciarVentana() {
 		this.setTitle("Chat");			 				// titulo
-		this.setBounds(10, 10, 400, 400);				// establece la posicion en coordenadas (x, y) y el tamaño
+		this.setBounds(10, 10, 450, 450);				// establece la posicion en coordenadas (x, y) y el tamaño
 		//this.setSize(300, 200);						// tamaño
 		this.setLocationRelativeTo(null);				// centrado
-		//this.setResizable(false);						// no se puede redimensionar
+		this.setResizable(false);						// no se puede redimensionar
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 	
