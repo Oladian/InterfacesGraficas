@@ -29,10 +29,6 @@ public class Chat {
 @SuppressWarnings("serial")
 class InterfazChat extends JFrame{
 	
-	private JLabel etiqueta;   	//componente de la frame, se declara como 
-								//atributo de clase para que la vea cualquier metodo
-	
-	private JTextField cajaTexto;
 	
 	public InterfazChat() {
 		iniciarVentana();

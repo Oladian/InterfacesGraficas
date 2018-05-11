@@ -1,8 +1,6 @@
 package com.iesvirgendelcarmen.contenedores;
 
 import java.awt.BorderLayout;
-import java.awt.GridLayout;
-
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;

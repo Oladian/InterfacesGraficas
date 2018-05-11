@@ -1,11 +1,7 @@
 package com.iesvirgendelcarmen.contenedores;
 
-import java.awt.FlowLayout;
-
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JSeparator;
-import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 
 public class ImplementacionOptimaFrame {

@@ -5,7 +5,6 @@ import java.awt.GridLayout;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
@@ -27,10 +26,8 @@ public class Calculadora {
 @SuppressWarnings("serial")
 class InterfazCalculadora extends JFrame{
 	
-	private JLabel etiqueta;   	//componente de la frame, se declara como 
 								//atributo de clase para que la vea cualquier metodo
 	
-	private JTextField cajaTexto;
 	
 	public InterfazCalculadora() {
 		iniciarVentana();
