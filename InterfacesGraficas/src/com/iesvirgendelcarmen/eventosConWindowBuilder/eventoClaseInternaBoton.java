@@ -81,7 +81,7 @@ public class eventoClaseInternaBoton {
 			if(((JButton)e.getSource()).getText().equals("Borrar"))
 				cabecera="Borrado usuario ";
 			
-			if(password.length!=0 && usuario.length()!=0&&cabecera.equals("Borrado usuario ")) {
+			if(password.length!=0 && usuario.length()!=0 && cabecera.equals("Borrado usuario ")) {
 				System.out.println(((JButton) e.getSource()).getText());
 				textFieldUsuario.setText("");
 				passwordField.setText("");

@@ -3,13 +3,16 @@ package com.iesvirgendelcarmen.eventosConWindowBuilder;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
-public class eventoClaseImplementaActionListener implements ActionListener{
+public class eventoClaseImplementaActionListener implements ActionListener, ItemListener{
 
 	private JFrame frame;
 	private JTextField textFieldUsuario;
@@ -93,6 +96,11 @@ public class eventoClaseImplementaActionListener implements ActionListener{
 			passwordField.setText("");
 		}
 		labelInfo.setText(cabecera+usuario);
+		
+	}
+
+	@Override
+	public void itemStateChanged(ItemEvent e) {
 		
 	}
 }
