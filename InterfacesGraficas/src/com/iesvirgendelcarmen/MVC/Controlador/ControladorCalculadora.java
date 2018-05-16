@@ -53,6 +53,7 @@ public class ControladorCalculadora implements ActionListener{
 		
 		case "=":
 			try {
+				
 				modelo = new CalculadoraModelo(textoCalculadora);
 				vista.getTextFieldNumeros().setText(modelo.devolverResultado()+"");
 			} catch (ExcepcionCalculadora e1) {

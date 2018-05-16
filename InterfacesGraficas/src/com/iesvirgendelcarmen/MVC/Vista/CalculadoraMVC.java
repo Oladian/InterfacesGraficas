@@ -65,6 +65,7 @@ public class CalculadoraMVC {
 		frame.getContentPane().setForeground(Color.WHITE);
 		frame.getContentPane().setFont(new Font("Tahoma", Font.ITALIC, 16));
 		frame.setBounds(100, 100, 350, 300);
+		frame.setResizable(false);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setTitle("Calculadora con WindowBuilder");
 		
