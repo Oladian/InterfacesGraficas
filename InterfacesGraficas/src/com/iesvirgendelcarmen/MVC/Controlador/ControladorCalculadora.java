@@ -49,6 +49,7 @@ public class ControladorCalculadora implements ActionListener{
 		String textoCalculadora = vista.getTextFieldNumeros().getText();
 		JButton boton = (JButton)e.getSource();
 		String botonString = boton.getText();
+		
 		switch (botonString) {
 		
 		case "=":
