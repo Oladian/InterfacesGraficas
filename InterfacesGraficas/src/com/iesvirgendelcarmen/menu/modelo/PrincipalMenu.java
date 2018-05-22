@@ -11,8 +11,7 @@ public class PrincipalMenu {
 			public void run() {
 				try {
 					VistaMenu vista = new VistaMenu();
-					ModeloMenu modelo = new ModeloMenu();
-					new ControladorMenu(modelo, vista);
+					new ControladorMenu(vista);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
